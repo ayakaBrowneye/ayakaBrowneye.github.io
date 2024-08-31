@@ -110,6 +110,10 @@ header nav ul li {
   display: none;
 }
 
+.sp-logo img {
+  width: 0;
+}
+
 /* mainに適用されるcss*/
 
 #top,
