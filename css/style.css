@@ -198,6 +198,10 @@ footer {
     top: 70vh;
     right: 5%;
   }
+
+  .sp-logo img {
+    width: 100%;
+  }
   /* headerに適用されるCSS */
   header {
     background-color: #aad6ec;
