@@ -102,7 +102,6 @@ header nav ul li {
   margin-left: 30px;
 }
 
-/* mainに適用されるcss*/
 .sp {
   display: none;
 }
@@ -110,6 +109,8 @@ header nav ul li {
 .sp-logo {
   display: none;
 }
+
+/* mainに適用されるcss*/
 
 #top,
 #about,
