@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ayaka's Portfolio_work1</title>
+    <meta
+      name="description"
+      content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <h1>Banyan CAFE</h1>
+        <nav>
+          <ul>
+            <li><a href="/portfolio/works1/index.html#">HOME</a></li>
+            <li><a href="/portfolio/works1/index.html#news">NEWS</a></li>
+            <li><a href="/portfolio/works1/index.html#access">ACCESS</a></li>
+            <li><a href="/portfolio/works1/menu.html">MENU</a></li>
+            <li><a href="/portfolio/works1/contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="contact main-visual"><div>CONTACT</div></div>
+      <section class="contact">
+        <h2>CONTACT</h2>
+        <form action="result.html">
+          <p class="question">
+            <label for="kind">お問い合わせ</label><br />
+            <select name="kind" id="kind">
+              <option value="1">ご予約</option>
+              <option value="2">お店に関するお問い合わせ</option>
+              <option value="3">その他</option>
+            </select>
+          </p>
+          <p class="question">
+            はじめてのご来店ですか？<br />
+            <label
+              ><input
+                type="radio"
+                name="first"
+                value="yes"
+                checked
+              />はい</label
+            ><br />
+            <label><input type="radio" name="first" value="no" />いいえ</label>
+          </p>
+          <p class="question">
+            当カフェをお知りになったきっかけは？<br />
+            <label
+              ><input
+                type="checkbox"
+                name="how"
+                value="friend"
+              />知り合いの紹介で</label
+            ><br />
+            <label
+              ><input
+                type="checkbox"
+                name="how"
+                value="magazine"
+              />SNS、Webサイト、雑誌などを見て</label
+            >
+          </p>
+          <p class="question">
+            <label for="subject">お問い合わせの件名</label><br />
+            <input
+              type="text"
+              name="subject"
+              placeholder="タイトル"
+              id="subject"
+            />
+          </p>
+          <p class="question">
+            <label for="message">お問い合わせの具体的な内容</label><br />
+            <textarea name="message" id="message"></textarea>
+          </p>
+          <p class="question">
+            <label for="mail">メールアドレス</label><br />
+            <input type="email" name="mail" id="mail" />
+          </p>
+          <p class="submit">
+            <input type="submit" value="送信" />
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer>&copy; Ayaka Otani 2024</footer>
+    <script src="js/index.js" async></script>
+  </body>
+</html>
