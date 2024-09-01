@@ -1,0 +1,439 @@
+/* 全てに適用されるCSS */
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  line-height: 1.8rem;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #231816;
+}
+
+a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: relative;
+  color: #2ba6e1;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #2ba6e1;
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+a:hover::after {
+  transform: scale(1, 1);
+}
+
+img {
+  width: 100%;
+}
+
+.sp-br {
+  display: none;
+}
+/* headerに適用されるCSS */
+header {
+  background-image: url(/portfolio/works1/images/pattern.jpg);
+  background-repeat: repeat;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.header-inner {
+  width: 100%;
+  padding: 10px auto 10px;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-inner nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-inner nav ul li {
+  list-style: none;
+  margin-left: 15px;
+}
+
+/* footerに適用されるcss */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #2ba6e1;
+}
+
+/* common */
+/* mainに適用されるcss*/
+section {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+h2,
+h3 {
+  padding: 10px 20px;
+  border-bottom: #231816 solid 1px;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h3::before {
+  content: "";
+  display: inline-block;
+  background-image: url(/portfolio/works1/images/coffeebeans.png);
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.main-visual {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* index */
+/* mainに適用されるcss*/
+
+.swiper-slide {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.slide1 {
+  background-image: url(/portfolio/works1/images/header2.jpg);
+}
+.slide2 {
+  background-image: url(/portfolio/works1/images/header3.jpg);
+}
+.slide3 {
+  background-image: url(/portfolio/works1/images/header4.jpg);
+}
+
+.about p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.news dl {
+  width: 80%;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news dt,
+.news dd {
+  margin-bottom: 20px;
+  border-bottom: #231816 dashed 1px;
+}
+
+.news dt {
+  width: 20%;
+}
+
+.news dd {
+  width: 80%;
+}
+
+.access p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.map {
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* contact */
+/* mainに適用されるcss*/
+.main-visual.contact {
+  background-image: url(/portfolio/works1/images/header5.jpg);
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.question {
+  margin-top: 30px;
+}
+
+input[type="text"],
+textarea,
+input[type="email"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+}
+textarea {
+  height: 200px;
+}
+
+.submit {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+
+.submit input {
+  border: none;
+  padding: 20px;
+  width: 200px;
+  background-color: #2ba6e1;
+  color: #ffffff;
+}
+
+/* menu */
+/* mainに適用されるcss*/
+.main-visual.menu {
+  background-image: url(/portfolio/works1/images/foodHeader.jpg);
+}
+
+.main-visual div {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+/* タブメニュー */
+.tab {
+  margin: 20px auto;
+}
+
+.tab__menu {
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+}
+
+.tab__menu-item {
+  list-style: none;
+  padding: 5px 20px;
+  margin-right: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.tab__menu-item span::before {
+  content: "";
+  display: inline-block;
+  background-image: url(/portfolio/works1/images/coffeebeans.png);
+  background-position: center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.tab__menu-item::after {
+  content: "";
+  background-color: #2ba6e1;
+  width: 80%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 11%;
+  transition: all 0.3s;
+  transform: scaleX(0);
+}
+
+.tab__menu-item:hover::after {
+  transform: scaleX(1);
+}
+
+.tab__menu-item.is-active::before {
+  content: "";
+  background-color: #2ba6e1;
+  width: 80%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 11%;
+  transition: all 0.3s;
+  transform: scaleX(1);
+}
+
+.tab__menu-item:last-of-type {
+  margin-right: 0px;
+}
+
+/* タブパネル */
+.tab__panel {
+  width: 100%;
+  padding: 30px 0;
+}
+
+.tab__panel-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  text-align: center;
+}
+
+.tab__panel-text img {
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+}
+
+.tab__panel-box001 {
+  display: none;
+}
+
+.tab__panel-box002 {
+  display: none;
+}
+
+/* is-showがついている時のスタイル */
+.tab__panel-box.is-show {
+  display: block;
+}
+
+/* result */
+/* mainに適用されるcss*/
+.contact-box {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.contact-box p {
+  margin-top: 30px;
+}
+
+.contact-box dl dt {
+  display: inline-block;
+  margin-top: 20px;
+  border-bottom: #231816 dashed 1px;
+}
+
+.contact-box dl dd {
+  padding: 10px 20px;
+}
+
+/* SPに適用されるcss */
+@media (max-width: 767px) {
+  a {
+    padding: 5px 30px;
+    line-height: 1.2rem;
+  }
+
+  .sp-br {
+    display: block;
+  }
+  /* headerに適用されるCSS */
+  header h1 {
+    text-align: center;
+  }
+  .header-inner {
+    display: block;
+    padding: 10px 10px;
+  }
+
+  .header-inner nav {
+    margin-top: 15px;
+  }
+
+  .header-inner nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-inner nav ul li {
+    margin-left: 0;
+  }
+  /* footerに適用されるcss */
+
+  /* index */
+  /* mainに適用されるcss*/
+  .news dl {
+    display: block;
+  }
+
+  .news dl dt {
+    display: inline-block;
+    width: initial;
+  }
+
+  .news dl dd {
+    width: initial;
+    border: none;
+    overflow-wrap: break-word;
+    margin-left: 1.5rem;
+  }
+
+  /* contact */
+  /* mainに適用されるcss*/
+
+  .contact form {
+    padding: 0 20px;
+  }
+
+  /* menu */
+  /* mainに適用されるcss*/
+  .tab__panel-text {
+    display: block;
+  }
+  .tab__panel-text div {
+    margin-bottom: 30px;
+  }
+
+  .tab__panel {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  /* result */
+  /* mainに適用されるcss*/
+  .contact-box {
+    padding: 0 20px;
+  }
+}
+
+/* カラーコード 
+  #231816 black
+  #e83829 red 
+  #2ba6e1 blue
+  #ffffff
+  */
