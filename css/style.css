@@ -134,18 +134,12 @@ header nav ul li {
 }
 
 #about {
-  align-items: center;
+  display: flex;
   justify-content: center;
-}
-
-.circle {
-  background-color: #aad6ec;
-  border-radius: 59% 69% 52% 67% / 89% 88% 89% 90%;
-  width: 80%;
-  height: 34%;
-  margin-bottom: 170px;
   text-align: center;
-  padding: 20px 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0 0;
 }
 
 .circle h2,
@@ -153,13 +147,32 @@ header nav ul li {
   font-size: 2rem;
 }
 
-.circle h3 {
-  margin-top: 25px;
+.about-text {
+  line-height: 1.5rem;
+  margin-top: 50px;
 }
 
-.about-text {
-  line-height: 1.2rem;
+.about-box {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto 0;
+}
+
+.about-box img {
+  width: 50px;
+  height: 50px;
+}
+
+.about-box h3 {
   margin-top: 20px;
+  font-size: 1.4rem;
+}
+
+.about-box-left,
+.about-box-right {
+  margin-top: 20px;
+  text-align: center;
+  width: 30%;
 }
 
 #works {
@@ -174,6 +187,22 @@ header nav ul li {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
 }
+
+.works-items img {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.works-items a:hover span > img {
+  transform: scale(1.2);
+}
+
+.works-items .mask {
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+
 /* footerに適用されるcss */
 footer {
   text-align: center;
@@ -252,10 +281,20 @@ footer {
   }
 
   /* mainに適用されるcss*/
-  .circle {
-    background-color: transparent;
-    position: relative;
+  #about {
+    height: auto;
   }
+
+  .about-box {
+    display: block;
+  }
+
+  .about-box-left,
+  .about-box-right {
+    width: 80%;
+    margin: 50px auto 0;
+  }
+
   #works {
     height: auto;
   }
