@@ -40,20 +40,30 @@
         </section>
 
         <section id="about">
-          <div class="circle fadeUpTrigger">
+          <div class="circle">
             <h2>ABOUT</h2>
-            <p class="about-text">
+            <p class="about-text fadeUpTrigger">
               こちらのサイトは、<br class="sp" />元教員WEBエンジニアの<br
                 class="sp"
-              />ポートフォリオサイトです。<br />
-              使用言語：HTML CSS PHP JavaScript
+              />ポートフォリオサイトです。
             </p>
-            <h3>プロフィール</h3>
-
-            <p class="about-text">
-              中学校の教員を3年ほどしていました。<br />
-              2023年よりWEBエンジニアとして<br class="sp" />働いています。
-            </p>
+            <div class="about-box">
+              <div class="about-box-left fadeUpTrigger">
+                <img src="/images/abouticon1.png" alt="icon" />
+                <h3>使用言語</h3>
+                <p>
+                  こちらのポートフォリオでは、HTML、CSS、JavaScriptを使用しています。
+                  仕事では、PHPも使用しています。
+                </p>
+              </div>
+              <div class="about-box-right fadeUpTrigger">
+                <img src="/images/abouticon2.png" alt="icon" />
+                <h3>プロフィール</h3>
+                <p>
+                  3年ほど中学校の教員をしておりました。2023年よりWebエンジニアとして働いています。
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         <section id="works">
@@ -61,11 +71,13 @@
           <div class="works-items">
             <div class="works-item fadeUpTrigger">
               <a href="/portfolio/works1/index.html">
-                <img
-                  src="/portfolio/works1/images/header1.jpg"
-                  alt="work-img-1"
-                />
-                <p class="work-title">カフェ</p>
+                <span class="mask">
+                  <img
+                    src="/portfolio/works1/images/header1.jpg"
+                    alt="work-img-1"
+                  />
+                </span>
+                <p class="work-title open">カフェ</p>
                 <p class="work-description">こんなカフェがあったら…</p>
               </a>
             </div>
