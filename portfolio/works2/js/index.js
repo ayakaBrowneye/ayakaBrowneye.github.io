@@ -7,25 +7,6 @@ for (var i = 0; i < btnMenu.length; i++) {
   });
 }
 
-// top画像の表示のjs
-const topSwiper = new Swiper(".mySwiper", {
-  effect: "fade",
-  speed: 2000,
-  loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-});
-
-// ギャラリーのソートに関するjs
-var grid = new Muuri(".grid", {
-  showDuration: 600,
-  showEasing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-  hideDuration: 600,
-  hideEasing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-});
-
 function sortBtnClick(e) {
   const activeClass = document.querySelector(".sort-btn .active");
   if (activeClass) {
@@ -58,4 +39,24 @@ function fadeAnime() {
 }
 
 window.addEventListener("scroll", fadeAnime);
-window.onload = fadeAnime();
+window.onload = function () {
+  fadeAnime();
+  // ギャラリーのソートに関するjs
+  var grid = new Muuri(".grid", {
+    showDuration: 600,
+    showEasing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
+    hideDuration: 600,
+    hideEasing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
+  });
+
+  // top画像の表示のjs
+  const topSwiper = new Swiper(".mySwiper", {
+    effect: "fade",
+    speed: 2000,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  });
+};
