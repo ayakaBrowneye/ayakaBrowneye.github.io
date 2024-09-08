@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta
+      name="description"
+      content="テキストテキストテキストテキストテキストテキストテキストテキスト"
+    />
+    <!-- <link rel="icon" href="images/favicon.ico" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <button class="btn-menu" type="button">
+      <i class="btn-menu__bars" aria-hidden="true"></i>
+    </button>
+    <header>
+      <nav class="g-nav">
+        <div class="g-nav-list">
+          <!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+          <ul>
+            <li><a href="#">Top</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="swiper mySwiper topImg">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/headerImg1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/headerImg2.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <h1>Photographer works collection</h1>
+      <ul class="sort-btn">
+        <li class="sort00 active" onclick="sortBtnClick(event)"><p>All</p></li>
+        <li class="sort01" onclick="sortBtnClick(event)"><p>Forest</p></li>
+        <li class="sort02" onclick="sortBtnClick(event)"><p>Sea</p></li>
+      </ul>
+      <section class="portfolio-grid">
+        <ul class="grid">
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg1.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg1.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort02">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/seaImg1.jpg"
+                  data-lightbox="group2"
+                  data-title="sea"
+                  ><img src="images/seaImg1.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg2.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg2.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort02">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/seaImg2.jpg"
+                  data-lightbox="group2"
+                  data-title="sea"
+                  ><img src="images/seaImg2.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg3.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg3.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort02">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/seaImg3.jpg"
+                  data-lightbox="group2"
+                  data-title="sea"
+                  ><img src="images/seaImg3.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg4.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg4.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort02">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/seaImg4.jpg"
+                  data-lightbox="group2"
+                  data-title="sea"
+                  ><img src="images/seaImg4.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg5.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg5.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg1.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg1.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort02">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/seaImg1.jpg"
+                  data-lightbox="group2"
+                  data-title="sea"
+                  ><img src="images/seaImg1.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg2.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg2.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort02">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/seaImg2.jpg"
+                  data-lightbox="group2"
+                  data-title="sea"
+                  ><img src="images/seaImg2.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg3.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg3.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort02">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/seaImg3.jpg"
+                  data-lightbox="group2"
+                  data-title="sea"
+                  ><img src="images/seaImg3.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg4.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg4.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort02">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/seaImg4.jpg"
+                  data-lightbox="group2"
+                  data-title="sea"
+                  ><img src="images/seaImg4.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+          <li class="item sort01">
+            <div class="item-content rotateYTrigger">
+              <span class="mask">
+                <a
+                  href="images/forestImg5.jpg"
+                  data-lightbox="group1"
+                  data-title="forest"
+                  ><img src="images/forestImg5.jpg" alt=""
+                /></a>
+                <span class="cap">Check</span>
+              </span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>© 2024 Ayaka Otani</footer>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js" async></script>
+  </body>
+</html>
