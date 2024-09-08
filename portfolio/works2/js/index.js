@@ -7,20 +7,6 @@ for (var i = 0; i < btnMenu.length; i++) {
   });
 }
 
-function sortBtnClick(e) {
-  const activeClass = document.querySelector(".sort-btn .active");
-  if (activeClass) {
-    activeClass.classList.remove("active");
-  }
-  e.currentTarget.classList.add("active");
-  const className = e.currentTarget.className.split(" ");
-  if (className[0] == "sort00") {
-    grid.show("");
-  } else {
-    grid.filter("." + className[0]);
-  }
-}
-
 // 下からくるっと表示させるjs
 function fadeAnime() {
   const elements = document.querySelectorAll(".rotateYTrigger");
@@ -41,13 +27,6 @@ function fadeAnime() {
 window.addEventListener("scroll", fadeAnime);
 window.onload = function () {
   fadeAnime();
-  // ギャラリーのソートに関するjs
-  var grid = new Muuri(".grid", {
-    showDuration: 600,
-    showEasing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-    hideDuration: 600,
-    hideEasing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-  });
 
   // top画像の表示のjs
   const topSwiper = new Swiper(".mySwiper", {
@@ -59,4 +38,28 @@ window.onload = function () {
       disableOnInteraction: false,
     },
   });
+
+  // ギャラリーソート
+  var grid = new Muuri(".grid", {
+    showDuration: 600,
+    showEasing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
+    hideDuration: 600,
+    hideEasing: "cubic-bezier(0.215, 0.61, 0.355, 1)",
+  });
+  const sortBtn = document.querySelectorAll(".sort-btn li");
+  for (let i = 0; i < sortBtn.length; i++) {
+    sortBtn[i].addEventListener("click", function (e) {
+      const activeClass = document.querySelector(".sort-btn .active");
+      if (activeClass) {
+        activeClass.classList.remove("active");
+      }
+      e.currentTarget.classList.add("active");
+      const className = e.currentTarget.className.split(" ");
+      if (className[0] == "sort00") {
+        grid.show("");
+      } else {
+        grid.filter("." + className[0]);
+      }
+    });
+  }
 };
