@@ -57,5 +57,5 @@ function fadeAnime() {
   });
 }
 
-window.addEventListener("scroll", fadeAnime());
+window.addEventListener("scroll", fadeAnime);
 window.onload = fadeAnime();
