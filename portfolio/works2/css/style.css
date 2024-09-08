@@ -1,0 +1,364 @@
+/* 全てに適用されるCSS */
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  font-family: "Sacramento", cursive;
+  color: #000000;
+}
+
+img {
+  width: 100%;
+}
+
+/* headerに適用されるCSS */
+/* ハンバーガーメニュー */
+.btn-menu {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-menu:focus {
+  outline: none;
+}
+
+.btn-menu__bars {
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 6px;
+  background-color: #000000;
+  transition: all 0.3s;
+}
+
+.btn-menu__bars:before,
+.btn-menu__bars:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  transition: all 0.3s;
+}
+
+.btn-menu__bars:before {
+  transform: translate(0, -12px);
+}
+
+.btn-menu__bars:after {
+  transform: translate(0, 12px);
+}
+
+.menu-open .btn-menu__bars {
+  background-color: transparent;
+}
+
+.menu-open .btn-menu__bars:before {
+  transform: rotate(45deg);
+}
+
+.menu-open .btn-menu__bars:after {
+  transform: rotate(-45deg);
+}
+
+/* グローバルナビ */
+.g-nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 120%;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #999;
+  transition: all 0.6s;
+}
+
+.menu-open .g-nav {
+  left: 0;
+}
+.g-nav-list {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.g-nav-list ul {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.g-nav-list ul li {
+  list-style: none;
+  text-align: center;
+}
+
+.g-nav-list ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  letter-spacing: 0.1rem;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.g-nav-list ul li a:hover {
+  color: #f8a44c;
+}
+
+.g-nav-list ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: #f8a44c;
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+}
+
+.g-nav-list ul li a:hover::after {
+  transform: scale(1, 1);
+}
+
+/* TOP画像 */
+.topImg {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.topImg img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  transition: transform 5s;
+  transform: scale(1);
+}
+
+.swiper-slide-active img {
+  transform: scale(1.2);
+  transition-delay: 0.3s;
+}
+
+/* mainに適用されるcss*/
+
+main h1 {
+  max-width: 600px;
+  font-size: 2rem;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+/* ソートボタン */
+.sort-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.sort-btn li {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.sort-btn li p {
+  padding: 10px 30px;
+  color: #333;
+  position: relative;
+  transition: all 0.7s;
+}
+
+.sort-btn li p::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #f8a44c;
+}
+
+.sort-btn li.active p::after,
+.sort-btn li p:hover::after {
+  width: 100%;
+  opacity: 1;
+  animation: bg-appear 0.5s forwards;
+}
+
+@keyframes bg-appear {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #f8a44c;
+  }
+}
+
+.sort-btn li.active p,
+.sort-btn li p:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+/* ギャラリー箇所 */
+.portfolio-grid {
+  margin: 50px auto 0;
+  max-width: 900px;
+}
+
+.grid {
+  position: relative;
+}
+.item {
+  display: block;
+  position: absolute;
+  width: 33%;
+  z-index: 1;
+  list-style: none;
+}
+
+/* クリック時に画像の拡大とフィルターの表示 */
+.item-content {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+.item-content span.mask {
+  position: relative;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.item-content span.mask::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transform: translateX(-100%);
+  background: #999;
+  width: 100%;
+  height: 100%;
+}
+
+.item-content:hover span.mask::before {
+  opacity: 0.8;
+  transform: translateX(0);
+}
+
+.item-content span.cap {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  line-height: 1.5rem;
+}
+
+.item-content:hover span.cap {
+  opacity: 1;
+}
+
+.item-content img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.item-content:hover img {
+  transform: scale(1.2);
+}
+
+/* 下からくるっと出現させるためのcss */
+.rotateYTrigger {
+  opacity: 0;
+}
+.rotateYTrigger.rotateY {
+  animation-name: rotateYAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes rotateYAnime {
+  from {
+    transform: rotateY(-45deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+/* footerに適用されるcss */
+footer {
+  text-align: center;
+  background: #f8a44c;
+  padding: 20px;
+}
+
+/* SPに適用されるcss */
+@media (max-width: 767px) {
+  /* headerに適用されるCSS */
+  .topImg {
+    height: 40vh;
+  }
+
+  /* mainに適用されるcss*/
+  .item {
+    width: 50%;
+  }
+}
